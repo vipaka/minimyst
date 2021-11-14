@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^[^.]+$|\.(?!(js|jpg|png|gif|mp3|ttf|ogg|mp4|wav|json)$)([^.]+$) /minimyst/index.php?path=$1 [NC,L,QSA]
